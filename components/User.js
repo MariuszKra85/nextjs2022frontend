@@ -2,12 +2,12 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 
 const QUERY = gql`
-query{
-    allUsers{
-        id
-        name
+  query {
+    allUsers {
+      id
+      name
     }
-};
+  }
 `;
 
 export default function User() {

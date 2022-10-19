@@ -1,8 +1,6 @@
-import { useQuery } from '@apollo/client';
 import User from '../components/User';
 
 export default function HomePage() {
-  const { data, error, loading } = useQuery(QUERY);
   console.log(data);
   return (
     <div>
