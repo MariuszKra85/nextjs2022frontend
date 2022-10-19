@@ -1,7 +1,6 @@
 import User from '../components/User';
 
 export default function HomePage() {
-  console.log(data);
   return (
     <div>
       <h1>Home page</h1>
@@ -12,6 +11,8 @@ export default function HomePage() {
 
 export async function getServerSideProps(context) {
   return {
-    props: {}, // will be passed to the page component as props
+    props: {
+      data: {},
+    }, // will be passed to the page component as props
   };
 }
