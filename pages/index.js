@@ -7,6 +7,7 @@ export default function HomePage() {
   const user = userState.item;
   return (
     <div>
+      <User />
       <h2> new time!!</h2>
       {user?.name ? <User /> : <Login />}
     </div>
