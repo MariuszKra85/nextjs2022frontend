@@ -12,6 +12,7 @@ const QUERY = gql`
 
 export default function User() {
   const { data, error, loading } = useQuery(QUERY);
+  console.log(data);
 
   return (
     <div>
