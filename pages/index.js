@@ -1,10 +1,14 @@
+import Login from '../components/Login';
 import User from '../components/User';
+import { useUser } from '../lib/useUser';
 
 export default function HomePage() {
+  const { userState } = useUser();
+  const user = userState.item;
   return (
     <div>
       <h2> new time!!</h2>
-      <User />
+      {user?.name ? <User /> : <Login />}
     </div>
   );
 }

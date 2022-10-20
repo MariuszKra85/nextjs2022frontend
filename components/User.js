@@ -1,25 +1,11 @@
-import { useQuery } from '@apollo/client';
-import gql from 'graphql-tag';
-
-const CURRENT_USER_QUERY = gql`
-  query {
-    authenticatedItem {
-      ... on User {
-        id
-        email
-        name
-      }
-    }
-  }
-`;
+import { useUser } from '../lib/useUser';
 
 export default function User() {
-  const { data, error, loading } = useQuery(CURRENT_USER_QUERY);
-  console.log(data);
-
+  const { userState } = useUser();
+  console.log(userState);
   return (
     <div>
-      <h2>{data?.authenticatedItem?.User.name}</h2>
+      <h2>{userState?.item?.name}</h2>
       <p>This Is for Maryem :*</p>
     </div>
   );
