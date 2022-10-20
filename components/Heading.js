@@ -1,3 +1,4 @@
+import { useQuery } from '@apollo/client';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -30,8 +31,22 @@ const Wrapper = styled.div`
   }
 `;
 
+const CURRENT_USER_QUERY = gql`
+  query {
+    authenticatedItem {
+      ... on User {
+        id
+        email
+        name
+      }
+    }
+  }
+`;
+
 export default function Heading() {
   // const [open, setOpen] = useState(false);
+  const { data, error, loading } = useQuery(CURRENT_USER_QUERY);
+  console.log(data);
   return (
     <Wrapper>
       <h1>
