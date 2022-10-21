@@ -5,13 +5,7 @@ import { useUser } from '../lib/useUser';
 export default function HomePage() {
   const { userState } = useUser();
   const user = userState.item;
-  return (
-    <div>
-      <User />
-      <h2> new time!!</h2>
-      {user?.name ? <User /> : <Login />}
-    </div>
-  );
+  return <div>{user?.name ? <User user={user} /> : <Login />}</div>;
 }
 
 // eslint-disable-next-line no-unused-vars

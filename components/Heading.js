@@ -1,4 +1,3 @@
-import { gql, useQuery } from '@apollo/client';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -11,7 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   h1 {
     position: relative;
-    padding-top: 50px;
+    padding-top: 5%;
     text-align: center;
     font-size: 4.5rem;
     letter-spacing: 1px;
@@ -20,33 +19,17 @@ const Wrapper = styled.div`
   }
   img {
     position: absolute;
+    max-height: 80vh;
+    max-width: 550px;
     width: 100%;
     opacity: 0.15;
     bottom: 0;
     z-index: -1;
   }
-  img {
-    max-height: 80vh;
-    max-width: 550px;
-  }
-`;
-
-const CURRENT_USER_QUERY = gql`
-  query {
-    authenticatedItem {
-      ... on User {
-        id
-        email
-        name
-      }
-    }
-  }
 `;
 
 export default function Heading() {
   // const [open, setOpen] = useState(false);
-  const { data, error, loading } = useQuery(CURRENT_USER_QUERY);
-  console.log(data);
   return (
     <Wrapper>
       <h1>

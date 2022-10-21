@@ -45,6 +45,7 @@ const LOGIN_MUTATION = gql`
       ... on UserAuthenticationWithPasswordSuccess {
         item {
           name
+          role
         }
       }
       ... on UserAuthenticationWithPasswordFailure {
@@ -96,6 +97,9 @@ export default function Login() {
       loginUser(data.authenticateUserWithPassword);
     }
   };
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <Wrapper>
