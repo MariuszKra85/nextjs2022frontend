@@ -22,7 +22,7 @@ const Wrapper = styled.div`
     max-height: 80vh;
     max-width: 550px;
     width: 100%;
-    opacity: 0.15;
+    opacity: 0.25;
     bottom: 0;
     z-index: -1;
   }

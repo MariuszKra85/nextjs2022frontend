@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
   padding: 1rem 2rem;
   border: none;
-  background-color: blue;
+  background-color: var(--red);
   margin: 5px;
   border-radius: 20px;
 `;
