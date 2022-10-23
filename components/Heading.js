@@ -1,21 +1,28 @@
+import { useState } from 'react';
 import styled from 'styled-components';
+import { Burger, Menu } from './Burger';
 
 const Wrapper = styled.div`
   width: 100vw;
   overflow-x: hidden;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
   flex-direction: column;
-  h1 {
+  h1,
+  h2 {
     position: relative;
-    padding-top: 5%;
-    text-align: center;
-    font-size: 4.5rem;
+    padding: 5% 0 0 10px;
+    text-align: left;
+    font-size: 3rem;
     letter-spacing: 1px;
     text-shadow: 3px 4px 10px #ff3333;
     margin: 0;
+    text-transform: uppercase;
+  }
+  h2 {
+    padding-top: 0;
+    font-size: 2rem;
   }
   img {
     position: absolute;
@@ -29,19 +36,17 @@ const Wrapper = styled.div`
 `;
 
 export default function Heading() {
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <Wrapper>
-      <h1>
-        Salsa Freedom <br />
-        Manchester
-      </h1>
+      <h1>Salsa Freedom</h1>
+      <h2>Manchester</h2>
       <img
         src="https://res.cloudinary.com/mariuszkra85/image/upload/v1662935098/Salsa/background_cnwkfh.gif"
         alt="background"
       />
-      {/* <Burger open={open} setOpen={setOpen} /> */}
-      {/* <Menu open={open} setOpen={setOpen} /> */}
+      <Burger open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} />
     </Wrapper>
   );
 }

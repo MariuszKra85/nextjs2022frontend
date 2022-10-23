@@ -5,8 +5,12 @@ const StyledButton = styled.button`
   padding: 1rem 2rem;
   border: none;
   background-color: var(--red);
+  color: var(--offWhite);
   margin: 5px;
   border-radius: 20px;
+  a {
+    color: var(--offWhite);
+  }
 `;
 
 export default function LevelButton({ level, href }) {

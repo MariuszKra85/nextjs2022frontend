@@ -6,18 +6,7 @@ import { Player } from 'video-react';
 import styled from 'styled-components';
 import LevelButton from '../components/LevelButton';
 import { useUser } from '../lib/useUser';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const PlayerWrapper = styled.div`
-  width: 80vw;
-  max-width: 500px;
-  margin-top: 10px;
-`;
+import Video from '../components/Video';
 
 const QUERY_BEGGINER_VIDEO = gql`
   query {
@@ -29,15 +18,17 @@ const QUERY_BEGGINER_VIDEO = gql`
     }
   }
 `;
-const Frame = styled.iframe`
-  border: none;
-`;
 
 export default function Beginners() {
   const { data: data2, error, loading } = useQuery(QUERY_BEGGINER_VIDEO);
-  const { data } = useUser();
-  console.log(data);
+  const { userState } = useUser();
+  console.log(userState);
   console.log(data2);
+
+  if (userState.name === null) {
+    console.log('no data!!');
+    return <p>You need to be login!!!!</p>;
+  }
 
   if (loading) {
     return <p>Loading...</p>;
@@ -48,17 +39,7 @@ export default function Beginners() {
       <>
         <p>Here will be video for beginners!!!</p>
         {data2.allVideos.map((e) => (
-          <Wrapper key={e.name}>
-            <p>{e.name}</p>
-            <Frame
-              src="https://drive.google.com/file/d/1oq5VwNFgXWyCJWI-V1YbFEYrBbsYnIxe/preview"
-              width="340"
-              height="280"
-              allow="autoplay"
-              allowFullScreen
-            />
-            <p>{e.description}</p>
-          </Wrapper>
+          <Video name={e.name} desc={e.description} url={e.url} />
         ))}
         <LevelButton level="Back" href="/" />
       </>

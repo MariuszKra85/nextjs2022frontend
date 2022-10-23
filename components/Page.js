@@ -4,16 +4,16 @@ import Heading from './Heading';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
+    font-family: 'Roboto';
+    src: url('/static/Roboto-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   html {
-    --red: #ff0000;
+    --red: #600000;
     --black: #020202;
     --grey: #3A3A3A;
-    --lightGrey: #e1e1e1;
+    --lightGrey: #d1d1d1;
     --offWhite: #ededed;
     --maxWidth: 1000px;
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
@@ -30,8 +30,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
-    line-height:2;
+    font-size: 1.4rem;
+    line-height:1.4;
   }
   a {
     text-decoration: none;
@@ -41,14 +41,14 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: underline;
   }
   button {
-    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;
 
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
 `;
 
 export default function Page({ children }) {
