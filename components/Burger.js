@@ -155,10 +155,13 @@ const Menu = ({ open, setOpen, windowSize }) => {
             <Link href="/">Dance Classes</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
+            <Link href="/">Private Hire</Link>
+          </button>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">About Us</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">App</Link>
+            <Link href="/">Salsa Freedom App</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Contact</Link>
