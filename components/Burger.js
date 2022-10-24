@@ -145,27 +145,25 @@ const Menu = ({ open, setOpen, windowSize }) => {
         </>
       ) : (
         <>
-          <button type="button" onClick={() => handleOpen}>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Home</Link>
           </button>
-          <button type="button" onClick={() => handleOpen}>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Privat Lesson</Link>
           </button>
-          <button type="button" onClick={() => handleOpen}>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Dance Classes</Link>
           </button>
-          <button type="button" onClick={() => handleOpen}>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">About Us</Link>
           </button>
-          <button type="button" onClick={() => handleOpen}>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">App</Link>
           </button>
-          <button type="button" onClick={() => handleOpen}>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Contact</Link>
           </button>
-          <button type="button" onClick={() => handleOpen}>
-            <Logout toggleOpen={setOpen} />
-          </button>
+          <Logout toggleOpen={setOpen} />
         </>
       )}
     </StyledMenu>
