@@ -69,6 +69,7 @@ const StyledMenu = styled.div`
     a {
       width: 100%;
       text-decoration: none;
+      text-transform: uppercase;
     }
     button {
       width: 100%;
