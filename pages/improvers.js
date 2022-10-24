@@ -1,7 +1,9 @@
 import { gql, useQuery } from '@apollo/client';
+import LevelButton from '../components/LevelButton';
+import Video from '../components/Video';
 import { useUser } from '../lib/useUser';
 
-const QUERY_BEGGINER_VIDEO = gql`
+const QUERY_BEGINNER_VIDEO = gql`
   query {
     allVideos {
       name
@@ -13,7 +15,7 @@ const QUERY_BEGGINER_VIDEO = gql`
 `;
 
 export default function Improvers() {
-  const { data: data2, error, loading } = useQuery(QUERY_BEGGINER_VIDEO);
+  const { data: data2, error, loading } = useQuery(QUERY_BEGINNER_VIDEO);
   const { userState } = useUser();
   console.log(userState);
   console.log(data2);
