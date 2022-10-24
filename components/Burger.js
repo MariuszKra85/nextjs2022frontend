@@ -91,9 +91,9 @@ const StyledMenu = styled.div`
   }
 
   a {
-    font-size: 2rem;
+    font-size: 2.3rem;
     padding: 2rem 0 0 2rem;
-    font-weight: bold;
+    font-weight: 900;
     letter-spacing: 0.5rem;
 
     text-decoration: none;
@@ -152,6 +152,9 @@ const Menu = ({ open, setOpen, windowSize }) => {
             <Link href="/">Privat Lesson</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
+            <Link href="/">Online Classes</Link>
+          </button>
+          <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Dance Classes</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
@@ -159,6 +162,9 @@ const Menu = ({ open, setOpen, windowSize }) => {
           </button>
           <button type="button" onClick={() => handleOpen()}>
             <Link href="/">About Us</Link>
+          </button>
+          <button type="button" onClick={() => handleOpen()}>
+            <Link href="/">Our Team</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
             <Link href="/">Salsa Freedom App</Link>

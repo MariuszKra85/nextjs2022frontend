@@ -90,7 +90,7 @@ export default function Login() {
     data?.authenticateUserWithPassword?.item?.name ? (
       <p>Login Success!</p>
     ) : (
-      <p>zjebales</p>
+      <p>You need login</p>
     );
   const handleUpdate = () => {
     if (data?.authenticateUserWithPassword?.item?.name) {
