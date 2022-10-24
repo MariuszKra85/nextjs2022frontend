@@ -14,18 +14,18 @@ const Wrapper = styled.div`
     position: relative;
     padding: 5% 0 0 10px;
     text-align: left;
-    font-size: 3rem;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
+    letter-spacing: 0px;
     text-shadow: 3px 4px 10px #ff3333;
     margin: 0;
     text-transform: uppercase;
   }
   h2 {
     padding-top: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   img {
-    position: absolute;
+    position: fixed;
     max-height: 80vh;
     max-width: 550px;
     width: 100%;

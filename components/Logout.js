@@ -48,7 +48,7 @@ export default function Logout({ toggleOpen }) {
     });
   }
   return (
-    <ButtonStyled type="button" onClick={() => handleSignOut}>
+    <ButtonStyled type="button" onClick={() => handleSignOut()}>
       Sign Out
     </ButtonStyled>
   );

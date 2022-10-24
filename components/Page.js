@@ -9,6 +9,12 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Bebas Neue';
+    src: url('/static/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   html {
     --red: #600000;
     --black: #020202;

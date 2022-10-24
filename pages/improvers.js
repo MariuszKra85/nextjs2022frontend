@@ -20,7 +20,7 @@ export default function Improvers() {
   console.log(userState);
   console.log(data2);
 
-  if (userState.name === null) {
+  if (userState?.name === null) {
     console.log('no data!!');
     return <p>You need to be login!!!!</p>;
   }
