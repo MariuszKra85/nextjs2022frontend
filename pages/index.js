@@ -100,7 +100,7 @@ export default function HomePage() {
         <VideoGallery el={el} key={el.id} />
       ))}
       {ClassesElement?.map((el) => (
-        <ClassBox el={el} key={el.} />
+        <ClassBox el={el} key={el.id} />
       ))}
       <DemoCarousel />
     </Wrapper>
