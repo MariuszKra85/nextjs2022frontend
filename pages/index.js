@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ClassBox from '../components/ClassBox';
 import TextBox from '../components/TextBox';
 import VideoGallery from '../components/VideoGallery';
+import DemoCarousel from '../components/Carousel';
 
 const QUERY_HOME_PAGE = gql`
   query {
@@ -100,6 +101,7 @@ export default function HomePage() {
       {ClassesElement?.map((el) => (
         <ClassBox el={el} key={el.title} />
       ))}
+      <DemoCarousel />
     </Wrapper>
   );
 }

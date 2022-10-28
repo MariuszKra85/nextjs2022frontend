@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
+  margin-bottom: 4rem;
   h2 {
     font-size: 3rem;
     margin-bottom: 0;
   }
   p {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   img {
     width: inherit;
@@ -17,6 +19,13 @@ const Wrapper = styled.div`
     color: var(--offWhite);
     border: 1px solid var(--offWhite);
     padding: 1rem;
+    transition: all 0.6s;
+
+    &:hover {
+      text-decoration: none;
+      background-color: var(--offWhite);
+      color: black;
+    }
   }
 `;
 

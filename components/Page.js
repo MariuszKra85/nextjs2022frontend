@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
+import Footer from './Footer';
 import Heading from './Heading';
 
 const GlobalStyles = createGlobalStyle`
@@ -43,7 +44,8 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.8rem;
     font-family: 'Bebas Neue';
     text-decoration: none;
-    color: var(--black);
+    color: var(--offWhite);
+    transition: all;
   }
   a:hover {
   }
@@ -72,6 +74,7 @@ export default function Page({ children }) {
       <Heading />
       <GlobalStyles />
       <InnerStyles>{children}</InnerStyles>
+      <Footer />
     </>
   );
 }
