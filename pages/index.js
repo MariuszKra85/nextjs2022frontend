@@ -9,6 +9,7 @@ import DemoCarousel from '../components/Carousel';
 const QUERY_HOME_PAGE = gql`
   query {
     allHomePageElements {
+      id
       where
       title
       text
@@ -86,7 +87,7 @@ export default function HomePage() {
     <Wrapper>
       <HeadText>SALSA IN MANCHESTER CITY CENTER</HeadText>
       {TextElement?.map((el) => (
-        <TextBox el={el} key={el.title} red />
+        <TextBox el={el} key={el.id} red />
       ))}
       {PictureElement?.map((el) => (
         <Image src={el.picture[0].url} key={el.picture[0].name} />
@@ -96,10 +97,10 @@ export default function HomePage() {
         <p>How We do it Salsa Manchester!!!</p>
       </VideoGaleryHeader>
       {VideosElement?.map((el) => (
-        <VideoGallery el={el} key={el.title} />
+        <VideoGallery el={el} key={el.id} />
       ))}
       {ClassesElement?.map((el) => (
-        <ClassBox el={el} key={el.title} />
+        <ClassBox el={el} key={el.} />
       ))}
       <DemoCarousel />
     </Wrapper>

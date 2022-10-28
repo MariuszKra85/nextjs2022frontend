@@ -16,6 +16,7 @@ export default function VideoGallery({ el }) {
   return (
     <Wrapper>
       <iframe
+        allowFullScreen
         title={video[0].name}
         src={video[0].url}
         frameBorder="0"

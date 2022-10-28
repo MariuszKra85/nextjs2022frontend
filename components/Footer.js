@@ -58,6 +58,11 @@ const SocialWrapper = styled.div`
       border: 1px solid #909090;
     }
   }
+  a:hover {
+    ::after {
+      width: 0;
+    }
+  }
 `;
 
 export default function Footer() {
@@ -77,7 +82,9 @@ export default function Footer() {
       <h4>LINKS</h4>
       <h4>GET IN TOUCH</h4>
       <SocialWrapper>
-        <img src="/static/fb.png" alt="facebook" />
+        <a href="https://www.facebook.com/SalsaDanceManchester">
+          <img src="/static/fb.png" alt="facebook" />
+        </a>
         <img
           src="/static/instagram.png"
           alt="facebook"

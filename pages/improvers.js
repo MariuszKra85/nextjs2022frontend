@@ -5,7 +5,7 @@ import { useUser } from '../lib/useUser';
 
 const QUERY_BEGINNER_VIDEO = gql`
   query {
-    allVideos {
+    allVideosLibs {
       name
       level
       url
@@ -15,10 +15,9 @@ const QUERY_BEGINNER_VIDEO = gql`
 `;
 
 export default function Improvers() {
-  const { data: data2, error, loading } = useQuery(QUERY_BEGINNER_VIDEO);
+  const { data, error, loading } = useQuery(QUERY_BEGINNER_VIDEO);
   const { userState } = useUser();
   console.log(userState);
-  console.log(data2);
 
   if (userState?.name === null) {
     console.log('no data!!');
@@ -33,7 +32,7 @@ export default function Improvers() {
     return (
       <>
         <p>Here will be video for beginners!!!</p>
-        {data2.allVideos.map((e) => {
+        {data.allVideosLibs.map((e) => {
           console.log(e.level);
           if (e.level === 'improver') {
             return (
@@ -46,7 +45,7 @@ export default function Improvers() {
             );
           }
         })}
-        <LevelButton level="Back" href="/" />
+        <LevelButton level="Back" href="/salsaapp" />
       </>
     );
   }

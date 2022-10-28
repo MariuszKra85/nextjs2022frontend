@@ -12,17 +12,19 @@ const Wrapper = styled.div`
   h1,
   h2 {
     position: relative;
-    padding: 5% 0 0 10px;
+    padding: 7% 0 0 10px;
     text-align: left;
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     letter-spacing: 0px;
+    line-height: 28px;
     text-shadow: 3px 4px 10px #ff3333;
     margin: 0;
     text-transform: uppercase;
   }
   h2 {
+    line-height: 20px;
     padding-top: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   img {
     position: fixed;
