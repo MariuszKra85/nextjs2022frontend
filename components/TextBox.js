@@ -13,20 +13,29 @@ const Wrapper = styled.div`
     font-size: 1.6rem;
   }
   a {
+    transition: all 0.5s;
     display: inline-flex;
     text-transform: uppercase;
-    border: 1px solid var(--offWhite);
+    border: 1px solid ${(red) => (red ? 'var(--red)' : 'var(--offWhite)')};
     padding: 1rem;
+    background-color: ${(red) => (red ? 'var(--red)' : null)};
     color: var(--offWhite);
+    &:hover {
+      text-decoration: none;
+      background-color: var(--offWhite);
+      color: black;
+    }
   }
 `;
 
-export default function TextBox({ el }) {
+export default function TextBox({ el, red }) {
   return (
     <Wrapper>
       <h2>{el.title}</h2>
-      <p>{el.paragraph}</p>
-      {el.link ? <a href={el.link.link}>{el.link.name}</a> : null}
+      <p>{el.text}</p>
+      {el.link[0].name
+        ? el.link.map((e) => <a href={e.link}>{e.name}</a>)
+        : null}
     </Wrapper>
   );
 }

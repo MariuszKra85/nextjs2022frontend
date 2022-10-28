@@ -1,26 +1,28 @@
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
+import ClassBox from '../components/ClassBox';
 import TextBox from '../components/TextBox';
+import VideoGallery from '../components/VideoGallery';
 
 const QUERY_HOME_PAGE = gql`
   query {
-    allHomePages {
+    allHomePageElements {
+      where
       title
-      paragraph
+      text
       link {
         name
         link
       }
-    }
-  }
-`;
-
-const QUERY_HOME_PAGE_PICTURE = gql`
-  query {
-    allHomePagePictures {
-      name
-      url
+      video {
+        name
+        url
+      }
+      picture {
+        name
+        url
+      }
     }
   }
 `;
@@ -35,33 +37,69 @@ const HeadText = styled.h1`
   padding: 2rem;
   background-color: rgba(100, 100, 100, 0.3);
 `;
-const Wrapeer = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+const Image = styled.img`
+  margin: 1rem 2rem;
+  opacity: 0.9;
+`;
+const VideoGaleryHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Bebas Neue';
+  h2 {
+    font-weight: 200;
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 200;
+  }
 `;
 
 export default function HomePage() {
   const { data, error, loading } = useQuery(QUERY_HOME_PAGE);
-  const { data: picture } = useQuery(QUERY_HOME_PAGE_PICTURE);
   console.log(data);
-  console.log(picture);
-  return (
-    <Wrapeer>
-      <HeadText>SALSA IN MANCHESTER CITY CENTER</HeadText>
-      {data?.allHomePages.map((el) => (
-        <>
-          <TextBox el={el} />
-        </>
-      ))}
-    </Wrapeer>
+  const TextElement = data?.allHomePageElements.filter(
+    (e) => e.where === 'TextBox'
   );
-}
 
-// eslint-disable-next-line no-unused-vars
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      data: {},
-    }, // will be passed to the page component as props
-  };
+  const PictureElement = data?.allHomePageElements.filter(
+    (e) => e.where === 'photoGallery'
+  );
+
+  const VideosElement = data?.allHomePageElements.filter(
+    (e) => e.where === 'video gallery'
+  );
+  const ClassesElement = data?.allHomePageElements.filter(
+    (e) => e.where === 'classBoxes'
+  );
+  console.log(VideosElement);
+  return (
+    <Wrapper>
+      <HeadText>SALSA IN MANCHESTER CITY CENTER</HeadText>
+      {TextElement?.map((el) => (
+        <TextBox el={el} key={el.title} red />
+      ))}
+      {PictureElement?.map((el) => (
+        <Image src={el.picture[0].url} key={el.picture[0].name} />
+      ))}
+      <VideoGaleryHeader>
+        <h2>Video Gallery</h2>
+        <p>How We do it Salsa Manchester!!!</p>
+      </VideoGaleryHeader>
+      {VideosElement?.map((el) => (
+        <VideoGallery el={el} key={el.title} />
+      ))}
+      {ClassesElement?.map((el) => (
+        <ClassBox el={el} key={el.title} />
+      ))}
+    </Wrapper>
+  );
 }

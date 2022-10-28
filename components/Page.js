@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Bebas Neue';
     src: url('/static/BebasNeue-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
   }
   html {
@@ -40,14 +40,23 @@ const GlobalStyles = createGlobalStyle`
     line-height:1.4;
   }
   a {
+    font-size: 1.8rem;
+    font-family: 'Bebas Neue';
     text-decoration: none;
     color: var(--black);
   }
   a:hover {
-    text-decoration: underline;
   }
   button {
     font-family: 'Roboto', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  h1,h2,h3,h4{
+    font-family: 'Bebas Neue';
+    font-weight: 100;
+  }
+  img{
+    box-sizing: border-box;
+    display: block;
   }
 `;
 
