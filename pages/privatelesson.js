@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import styled from 'styled-components';
 import ClassesView from '../components/ClassesView';
 import Hero from '../components/Hero';
+import PrivateClass from '../components/PrivateClass';
 import WidgetCenterText from '../components/WidgetCenterText';
 
 const PIC_QUERY = gql`
@@ -60,6 +61,11 @@ export default function PrivateLesson() {
         firstLine="BEST SALSA CLASSES IN MANCHESTER"
         secondLine="WE OFFER VARIATY OF DANCE CLASSES"
       />
+      <PrivateClass number="1" />
+
+      <PrivateClass number="2" />
+
+      <PrivateClass number="3" />
       {/* <ClassesView /> */}
     </div>
   );

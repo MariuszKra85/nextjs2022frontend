@@ -1,14 +1,14 @@
 import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-export default function DemoCarousel() {
+export default function DemoCarousel({ showThumbs, interval }) {
   return (
     <Carousel
       styles={styles}
       autoPlay
       emulateTouch
-      showThumbs
-      interval={3000}
+      showThumbs={showThumbs}
+      interval={interval}
       infiniteLoop
     >
       <div>

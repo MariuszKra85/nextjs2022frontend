@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   background-color: rgba(30, 30, 30, 0.7);
   padding: 2rem;
-  margin: 2rem;
+  margin: 2rem 0;
   h2 {
     font-family: 'Bebas Neue';
     letter-spacing: 0.7px;
@@ -33,7 +33,7 @@ export default function TextBox({ el, red }) {
     <Wrapper>
       <h2>{el.title}</h2>
       <p>{el.text}</p>
-      {el.link[0].name
+      {el?.link[0].name
         ? el.link.map((e) => <a href={e.link}>{e.name}</a>)
         : null}
     </Wrapper>

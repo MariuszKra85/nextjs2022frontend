@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin: 4rem 0;
   padding: 3rem 1rem 5rem;
-  background: rgba(40, 40, 40, 0.8);
+  background: rgba(30, 30, 40, 0.8);
   h2,
   h4 {
     margin: 0;
