@@ -4,16 +4,17 @@ import Logout from './Logout';
 
 const StyledBurger = styled.button`
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 1.5rem;
+  right: 1.2rem;
   flex-direction: column;
   justify-content: space-around;
-  width: 3rem;
-  height: 3.5rem;
-  background: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: ${({ open }) => (open ? 'transparent' : 'rgba(0, 0, 0, 0.7)')};
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 0;
+  padding: 0.5rem;
   z-index: 99;
   display: none;
 
@@ -150,28 +151,28 @@ const Menu = ({ open, setOpen, windowSize }) => {
             <Link href="/">Home</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">Privat Lesson</Link>
+            <Link href="/privatelesson">Privat Lesson</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">Dance Classes</Link>
+            <Link href="/danceclass">Dance Classes</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">Private Hire</Link>
+            <Link href="/privatehire">Private Hire</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">About Us</Link>
+            <Link href="/aboutus">About Us</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">Our Team</Link>
+            <Link href="/ourteam">Our Team</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
             <Link href="/salsaapp">Salsa Freedom App</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">Shop</Link>
+            <Link href="/shop">Shop</Link>
           </button>
           <button type="button" onClick={() => handleOpen()}>
-            <Link href="/">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </button>
           <Logout toggleOpen={setOpen} />
         </>

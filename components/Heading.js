@@ -5,6 +5,7 @@ import { Burger, Menu } from './Burger';
 const Wrapper = styled.div`
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
   color: white;
   display: flex;
   justify-content: left;
