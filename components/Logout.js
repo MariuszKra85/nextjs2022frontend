@@ -28,9 +28,16 @@ const ButtonStyled = styled.button`
   font-weight: bold;
   letter-spacing: 0.3rem;
   text-decoration: none;
+  text-transform: uppercase;
   transition: color 0.3s linear;
   display: flex;
   justify-content: center;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: #801010;
+  }
 `;
 
 export default function Logout({ toggleOpen }) {
@@ -47,9 +54,10 @@ export default function Logout({ toggleOpen }) {
       pathname: `/`,
     });
   }
-  return (
+  console.log(userState);
+  return userState?.name !== null ? (
     <ButtonStyled type="button" onClick={() => handleSignOut()}>
       Sign Out
     </ButtonStyled>
-  );
+  ) : null;
 }

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
+import Image from 'next/image';
 import Footer from './Footer';
 import Heading from './Heading';
 
@@ -39,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 1.4rem;
     line-height:1.4;
+    overflow-x: hidden;
   }
   a {
     font-size: 1.8rem;
@@ -64,8 +66,24 @@ const GlobalStyles = createGlobalStyle`
 
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
+  width: 100%;
   margin: 0 auto;
   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const ImageWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80vh;
+  max-width: 550px;
+  margin: 0 auto;
+  z-index: -99;
+`;
+const BgImage = styled(Image)`
+  opacity: 0.25;
 `;
 
 export default function Page({ children }) {
@@ -73,7 +91,16 @@ export default function Page({ children }) {
     <>
       <Heading />
       <GlobalStyles />
-      <InnerStyles>{children}</InnerStyles>
+      <InnerStyles>
+        {children}
+        <ImageWrapper>
+          <BgImage
+            layout="fill"
+            src="https://res.cloudinary.com/mariuszkra85/image/upload/v1662935098/Salsa/background_cnwkfh.gif"
+            alt="background"
+          />
+        </ImageWrapper>
+      </InnerStyles>
       <Footer />
     </>
   );

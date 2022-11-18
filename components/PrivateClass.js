@@ -45,19 +45,26 @@ const Wrapper = styled.div`
       transform: translateX(0);
     }
   }
+  @media (min-width: 700px) {
+    padding-right: 8rem;
+    margin-left: 2rem;
+    max-width: 400px;
+  }
 `;
 
-export default function PrivateClass({ number }) {
+export default function PrivateClass({ number, link }) {
   return (
     <Wrapper>
-      <h2>0{number}</h2>
-      <h4>SALSA HEN-DO</h4>
-      <h4>£20.00</h4>
-      <p>ARE YOU ORGANISING A HEN PARTY? WHY NOT TRY SALSA?</p>
-      <div>
-        <a href="/salsa/hendo">READ MORE</a>
-        <span />
-      </div>
+      <a href={link}>
+        <h2>0{number}</h2>
+        <h4>SALSA HEN-DO</h4>
+        <h4>£20.00</h4>
+        <p>ARE YOU ORGANISING A HEN PARTY? WHY NOT TRY SALSA?</p>
+        <div>
+          <a href="/salsa/hendo">READ MORE</a>
+          <span />
+        </div>
+      </a>
     </Wrapper>
   );
 }

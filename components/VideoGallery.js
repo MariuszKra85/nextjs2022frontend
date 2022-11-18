@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   margin: 0 2rem 4rem;
   iframe {
     width: 100%;
+    max-width: 400px;
     max-height: 400px;
     min-height: 200px;
   }

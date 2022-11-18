@@ -1,4 +1,4 @@
-import { gql, useMutation } from '@apollo/client';
+import { gql, useMutation, useQuery } from '@apollo/client';
 import styled from 'styled-components';
 import useForm from '../lib/useForm';
 import { useUser } from '../lib/useUser';
@@ -44,8 +44,11 @@ const LOGIN_MUTATION = gql`
     authenticateUserWithPassword(email: $email, password: $password) {
       ... on UserAuthenticationWithPasswordSuccess {
         item {
+          id
+          email
           name
           role
+          level
         }
       }
       ... on UserAuthenticationWithPasswordFailure {
@@ -63,6 +66,7 @@ const CURRENT_USER_QUERY = gql`
         id
         email
         name
+        role
       }
     }
   }
@@ -83,7 +87,7 @@ export default function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     const res = await singIn();
-
+    console.log(res);
     return res;
   }
   const message = () =>
@@ -92,9 +96,14 @@ export default function Login() {
     ) : (
       <p>You need login</p>
     );
+
+  const { data: user } = useQuery(CURRENT_USER_QUERY);
+
   const handleUpdate = () => {
     if (data?.authenticateUserWithPassword?.item?.name) {
       loginUser(data.authenticateUserWithPassword);
+
+      console.log(user);
     }
   };
   if (loading) {

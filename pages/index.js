@@ -31,15 +31,21 @@ const QUERY_HOME_PAGE = gql`
 
 const HeadText = styled.h1`
   margin: 30vh 2rem 40vh 2rem;
+  max-width: 400px;
   display: flex;
   font-size: 4rem;
   font-family: 'Bebas Neue';
   letter-spacing: 1px;
-  text-align: center;
+  justify-content: center;
   padding: 2rem;
   background-color: rgba(100, 100, 100, 0.3);
+
+  @media (min-width: 1200px) {
+    margin: 50vh 26% 30vh;
+  }
 `;
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -67,7 +73,6 @@ const VideoGaleryHeader = styled.div`
 
 export default function HomePage() {
   const { data, error, loading } = useQuery(QUERY_HOME_PAGE);
-  console.log(data);
   const TextElement = data?.allHomePageElements.filter(
     (e) => e.where === 'TextBox'
   );
@@ -82,7 +87,7 @@ export default function HomePage() {
   const ClassesElement = data?.allHomePageElements.filter(
     (e) => e.where === 'classBoxes'
   );
-  console.log(VideosElement);
+
   return (
     <Wrapper>
       <HeadText>SALSA IN MANCHESTER CITY CENTER</HeadText>

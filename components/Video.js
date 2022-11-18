@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Frame = styled.iframe`
@@ -22,16 +23,29 @@ const Wrapper = styled.div`
 `;
 
 export default function Video({ name, url, desc }) {
+  const width = window.innerWidth;
+
   return (
     <Wrapper key={name}>
       <h3>{name}</h3>
-      <Frame
-        src={url}
-        width="400px"
-        height="240px"
-        allow="autoplay"
-        allowFullScreen
-      />
+      {width > 1200 ? (
+        <Frame
+          src={url}
+          width="600px"
+          height="440px"
+          allow="autoplay"
+          allowFullScreen
+        />
+      ) : (
+        <Frame
+          src={url}
+          width="400px"
+          height="240px"
+          allow="autoplay"
+          allowFullScreen
+        />
+      )}
+
       <p>{desc}</p>
     </Wrapper>
   );

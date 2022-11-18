@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  max-width: var(--maxWidth);
+  margin: 0 auto;
   padding: 0rem 1rem 6rem;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);

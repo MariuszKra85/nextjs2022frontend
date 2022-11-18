@@ -16,13 +16,30 @@ const PIC_QUERY = gql`
 `;
 
 const Wrapper = styled.div`
-  padding: 1rem 1rem 5rem;
-  margin: 6rem 0;
+  padding: 1rem 2rem 5rem;
+  margin: 6rem 1rem;
   background-color: rgba(20, 20, 20, 0.7);
+  max-width: 700px;
   p {
     text-align: center;
     font-size: 1.6rem;
     color: var(--offWhite);
+  }
+`;
+const StyledSection = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+const ClassWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  width: 60%;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    flex-direction: row;
   }
 `;
 
@@ -31,7 +48,7 @@ export default function PrivateLesson() {
   if (loading) <h3>loading... </h3>;
   console.log(data);
   return (
-    <div>
+    <StyledSection>
       <Hero pic={data?.allPicturesLibs[0]} text="PRIVATE DANCE PRACTICE" />
       <Wrapper>
         <h2>PRIVATE Class</h2>
@@ -61,12 +78,14 @@ export default function PrivateLesson() {
         firstLine="BEST SALSA CLASSES IN MANCHESTER"
         secondLine="WE OFFER VARIATY OF DANCE CLASSES"
       />
-      <PrivateClass number="1" />
+      <ClassWrapper>
+        <PrivateClass number="1" link="/hendo" />
 
-      <PrivateClass number="2" />
+        <PrivateClass number="2" />
 
-      <PrivateClass number="3" />
+        <PrivateClass number="3" />
+      </ClassWrapper>
       {/* <ClassesView /> */}
-    </div>
+    </StyledSection>
   );
 }

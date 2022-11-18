@@ -1,10 +1,11 @@
 module.exports = {
-  async rewrites() {
-    return [
+  images: {
+    domains: ['res.cloudinary.com'],
+    remotePatterns: [
       {
-        source: '/api/graphql',
-        destination: 'https://seal-app-l2daf.ondigitalocean.app/api/graphql',
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
       },
-    ];
+    ],
   },
 };

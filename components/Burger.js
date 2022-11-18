@@ -18,7 +18,7 @@ const StyledBurger = styled.button`
   z-index: 99;
   display: none;
 
-  @media only screen and (max-width: 740px) {
+  @media only screen and (max-width: 1200px) {
     display: flex;
   }
 
@@ -53,15 +53,18 @@ const StyledBurger = styled.button`
   }
 `;
 const StyledMenu = styled.div`
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  height: 110vh;
   text-align: left;
   position: fixed;
+  width: calc(100vw - 100px);
   top: 1.7rem;
   right: 2rem;
   transition: transform 0.5s ease-in-out;
   z-index: 98;
+  background: rgba(5, 5, 10, 0.6);
+  padding-bottom: 10px;
 
   button {
     background-color: transparent;
@@ -71,22 +74,27 @@ const StyledMenu = styled.div`
       width: 100%;
       text-decoration: none;
       text-transform: uppercase;
-    }
-    button {
-      width: 100%;
+      font-size: 1.8rem;
     }
   }
 
-  @media (max-width: 740px) {
+  &:hover {
+    color: #801010;
+  }
+
+  @media (max-width: 1200px) {
     top: 0;
-    left: 0;
+    left: -18rem;
     width: 18rem;
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+    transform: ${({ open }) => (open ? 'translateX(98%)' : 'translateX(0)')};
     display: flex;
+    flex-direction: column;
+    height: 100vh;
     background: #effffa;
   }
 
   @media (max-width: 576px) {
+    left: -110%;
     width: 110%;
 
     background-color: rgba(225, 225, 225, 0.9);
@@ -100,17 +108,13 @@ const StyledMenu = styled.div`
 
     text-decoration: none;
     transition: color 0.5s linear;
-    @media (max-width: 700px) {
+    @media (max-width: 1200px) {
       color: #0d0c1d;
     }
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
       text-align: center;
-    }
-
-    &:hover {
-      color: #801010;
     }
   }
 `;

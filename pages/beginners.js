@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import React from 'react';
+import styled from 'styled-components';
 import LevelButton from '../components/LevelButton';
 import { useUser } from '../lib/useUser';
 import Video from '../components/Video';
@@ -14,6 +15,11 @@ const QUERY_BEGINNER_VIDEO = gql`
       description
     }
   }
+`;
+const Wrapper = styled.div`
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 40vh;
 `;
 
 export default function Beginners() {
@@ -31,7 +37,7 @@ export default function Beginners() {
 
   if (!loading) {
     return (
-      <>
+      <Wrapper>
         <p>Here will be video for beginners!!!</p>
         {data.allVideosLibs.map((e) => {
           if (e.level === 'beginner') {
@@ -46,7 +52,7 @@ export default function Beginners() {
           }
         })}
         <LevelButton level="Back" href="/salsaapp" />
-      </>
+      </Wrapper>
     );
   }
 }
