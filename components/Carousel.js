@@ -16,7 +16,7 @@ export default function DemoCarousel({ showThumbs, interval }) {
         <p className="legend">Legend 1</p>
       </div>
       <div>
-        <img src="https://res.cloudinary.com/mariuszkra85/image/upload/v1666652541/Salsa/pylon-1287823-scaled_xx7a8o.jpg" />
+        <img src="https://res.cloudinary.com/mariuszkra85/image/upload/v1666652542/Salsa/7103dae84c43acce5cc8a7df5b9c53f1_hpvk2m.jpg" />
         <p className="legend">Legend 2</p>
       </div>
       <div>
