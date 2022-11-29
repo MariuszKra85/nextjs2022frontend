@@ -102,6 +102,21 @@ export default function Page({ children }) {
         </ImageWrapper>
       </InnerStyles>
       <Footer />
+      <Script
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-DMN03FGPWF"
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DMN03FGPWF', {
+        page_path: window.location.pathname,
+        });
+    `}
+      </Script>
     </>
   );
 }
