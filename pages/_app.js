@@ -2,6 +2,7 @@ import { ApolloProvider } from '@apollo/client';
 import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 import Page from '../components/Page';
 import '../components/styles/nprogress.css';
 import withData from '../lib/withData';
@@ -17,6 +18,19 @@ function MyApp({ Component, pageProps, apollo }) {
       <UserStateProvider>
         <Page>
           <Component {...pageProps} />
+          <Script
+  strategy="lazyOnload"
+  src={`https://www.googletagmanager.com/gtag/js?id=G-X3C3702R7G`}
+/>
+          <Script strategy="lazyOnload">
+  {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X3C3702R7G', {
+        page_path: window.location.pathname,
+      });
+  `}
         </Page>
       </UserStateProvider>
     </ApolloProvider>
