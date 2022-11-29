@@ -2,7 +2,6 @@ import { ApolloProvider } from '@apollo/client';
 import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-import { GoogleAnalytics } from 'nextjs-google-analytics';
 import Page from '../components/Page';
 import '../components/styles/nprogress.css';
 import withData from '../lib/withData';
