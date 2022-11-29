@@ -36,17 +36,18 @@ const StyledImage = styled.div`
 `;
 export default function ClassBox({ el }) {
   const { title, picture, text, link } = el;
-  console.log(link[0]?.name);
   return (
     <Wrapper>
-      <StyledImage>
-        <Image
-          src={picture[0].url}
-          alt={picture[0].name}
-          layout="fill"
-          objectPosition="block"
-        />
-      </StyledImage>
+      {picture[0]?.name ? (
+        <StyledImage>
+          <Image
+            src={picture[0].url}
+            alt={picture[0].name}
+            layout="fill"
+            objectPosition="block"
+          />
+        </StyledImage>
+      ) : null}
 
       <h2>{title}</h2>
       <p>{text}</p>
