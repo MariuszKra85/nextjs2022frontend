@@ -4,13 +4,15 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 100%;
   margin: 1rem 2rem 4rem;
+  padding-bottom: 4rem;
+  background: rgba(10, 10, 20, 0.85);
 
   h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 0;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 2rem;
   }
 
