@@ -44,6 +44,9 @@ const Wrapper = styled.div`
     }
   }
 `;
+const SVGpic = styled.img`
+  padding: 1.1rem;
+`;
 
 const SocialWrapper = styled.div`
   display: flex;
@@ -51,7 +54,6 @@ const SocialWrapper = styled.div`
     margin: 0.8rem;
     width: 50px;
     height: 50px;
-    padding: 0.4rem;
     border: 1px solid #404040;
     transition: all 0.6s;
     &:hover {
@@ -89,6 +91,18 @@ export default function Footer() {
         </a>
         <img
           src="/static/instagram.png"
+          alt="facebook"
+          width="40px"
+          height="40px"
+        />
+        <SVGpic
+          src="/static/icon-twitter.svg"
+          alt="facebook"
+          width="40px"
+          height="40px"
+        />
+        <SVGpic
+          src="/static/icon-tiktok.svg"
           alt="facebook"
           width="40px"
           height="40px"

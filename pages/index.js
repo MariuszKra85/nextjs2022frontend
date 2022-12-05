@@ -33,8 +33,8 @@ const HeadText = styled.h1`
   margin: 30vh 2rem 40vh 2rem;
   max-width: 400px;
   display: flex;
-  font-size: 4rem;
-  font-family: 'Bebas Neue';
+  font-size: 2.4rem;
+  text-align: center;
   letter-spacing: 1px;
   justify-content: center;
   padding: 2rem;
@@ -57,7 +57,6 @@ const VideoGaleryHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Bebas Neue';
   h2 {
     font-weight: 200;
     font-size: 4rem;
