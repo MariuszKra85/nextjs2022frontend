@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   margin-bottom: 3rem;
   h2,
   h4 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
     margin-bottom: 1rem;
   }
@@ -52,12 +52,11 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function PrivateClass({ number, link }) {
+export default function PrivateClass({ link, title }) {
   return (
     <Wrapper>
       <a href={link}>
-        <h2>0{number}</h2>
-        <h4>SALSA HEN-DO</h4>
+        <h2>{title}</h2>
         <h4>£20.00</h4>
         <p>ARE YOU ORGANISING A HEN PARTY? WHY NOT TRY SALSA?</p>
         <div>

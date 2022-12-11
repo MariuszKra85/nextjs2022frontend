@@ -9,11 +9,12 @@ const Wrapper = styled.div`
   background: rgba(30, 30, 40, 0.8);
   h2,
   h4 {
+    text-align: center;
     margin: 0;
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
   h4 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 `;
 export default function WidgetCenterText({ firstLine, secondLine }) {
