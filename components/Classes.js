@@ -17,7 +17,7 @@ export default function Classes({ el, name }) {
     <Wrapper>
       <p>{name}</p>
       <img src={el?.url} alt={el?.name} />
-      <p>5pm - 6pm</p>
+      <p>5pm - 6pm </p>
       <p> Salsa</p>
     </Wrapper>
   );
