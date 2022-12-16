@@ -43,19 +43,19 @@ function Contact() {
   return (
     <div>
       <h2>Contact: </h2>
+
       <div
         style={{
-          height: '400px',
+          height: '500px',
           width: '80vw',
           margin: '0 auto',
         }}
       >
-        <GoogleMapReact
-          defaultCenter={defaultProps.center}
-          defaultZoom={defaultProps.zoom}
-        >
-          <AnyReactComponent lat={53.4808} lng={2.2426} text="We are here" />
-        </GoogleMapReact>
+        <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=1xHUDzHB2urzf6Qa-lUFxuKS6qZk0QAs&ehbc=2E312F"
+          width="400"
+          height="480"
+        />
       </div>
       <div>
         <h3>Our Place:</h3>
