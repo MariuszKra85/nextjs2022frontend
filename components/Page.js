@@ -78,12 +78,13 @@ const ImageWrapper = styled.div`
   bottom: 0;
   width: 100%;
   height: 80vh;
-  max-width: 550px;
+  max-width: 600px;
   margin: 0 auto;
   z-index: -99;
 `;
 const BgImage = styled(Image)`
   opacity: 0.25;
+  max-width: 600px;
 `;
 
 export default function Page({ children }) {

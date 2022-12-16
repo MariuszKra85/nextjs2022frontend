@@ -5,8 +5,9 @@ import { useUser } from '../lib/useUser';
 
 const Wrapper = styled.div`
   margin-top: 0vh;
+  width: 100%;
   @media (min-width: 1200px) {
-    margin: 35vh;
+    margin-top: 35vh;
   }
 `;
 
