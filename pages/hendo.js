@@ -12,6 +12,10 @@ export default function HenDo() {
       <p>
         Price is £15 per person and subject to a minimum booking of 10 people.
       </p>
+      <BookingLink
+        name="Book Private Lesson"
+        link="https://calendly.com/salsamanchester"
+      />
     </div>
   );
 }
