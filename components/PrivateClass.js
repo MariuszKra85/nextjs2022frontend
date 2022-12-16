@@ -52,12 +52,12 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function PrivateClass({ link, title }) {
+export default function PrivateClass({ link, title, price }) {
   return (
     <Wrapper>
       <a href={link}>
         <h2>{title}</h2>
-        <h4>£20.00</h4>
+        <h4>£{price}</h4>
         <p>ARE YOU ORGANISING A HEN PARTY? WHY NOT TRY SALSA?</p>
         <div>
           <a href="/salsa/hendo">READ MORE</a>

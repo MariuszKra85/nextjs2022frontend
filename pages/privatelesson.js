@@ -82,14 +82,24 @@ export default function PrivateLesson() {
         <PrivateClass
           link="/privateLess"
           title="Book a private dancing lesson"
+          price="40.00"
         />
 
-        <PrivateClass link="/weddings" title="Book Salsa Hen-do" />
+        <PrivateClass
+          link="/weddings"
+          title="Book Salsa Hen-do"
+          price="250.00"
+        />
 
-        <PrivateClass link="/hendo" title="Book a wedding party" />
+        <PrivateClass
+          link="/hendo"
+          title="Book a wedding party"
+          price="200.00"
+        />
         <PrivateClass
           link="/hendo"
           title="Book a private party for your birthday"
+          price="175.00"
         />
       </ClassWrapper>
       {/* <ClassesView /> */}
