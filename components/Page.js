@@ -6,8 +6,8 @@ import Heading from './Heading';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'Roboto';
-    src: url('/static/Roboto-Medium.ttf') format('truetype');
+    font-family: 'ComicSans';
+    src: url('/static/ComicSansMS3.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'ComicSans', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     font-size: 1.4rem;
@@ -55,7 +55,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   h1,h2,h3,h4{
-    font-family: 'Bebas Neue';
+    font-family: 'ComicSans';
     font-weight: 100;
   }
   img{
@@ -76,14 +76,16 @@ const InnerStyles = styled.div`
 const ImageWrapper = styled.div`
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 80vh;
-  max-width: 550px;
+  max-width: 600px;
   margin: 0 auto;
   z-index: -99;
 `;
 const BgImage = styled(Image)`
-  opacity: 0.25;
+  opacity: 0.15;
+  max-width: 600px;
 `;
 
 export default function Page({ children }) {

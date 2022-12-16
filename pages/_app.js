@@ -6,6 +6,7 @@ import Page from '../components/Page';
 import '../components/styles/nprogress.css';
 import withData from '../lib/withData';
 import { UserStateProvider } from '../lib/useUser';
+import { LevelStateProvider } from '../lib/useLevel';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -15,9 +16,11 @@ function MyApp({ Component, pageProps, apollo }) {
   return (
     <ApolloProvider client={apollo}>
       <UserStateProvider>
-        <Page>
-          <Component {...pageProps} />
-        </Page>
+        <LevelStateProvider>
+          <Page>
+            <Component {...pageProps} />
+          </Page>
+        </LevelStateProvider>
       </UserStateProvider>
     </ApolloProvider>
   );

@@ -11,12 +11,13 @@ const Wrapper = styled.div`
   border-radius: 5px;
 `;
 
-export default function Classes({ el, number }) {
+export default function Classes({ el, name }) {
+  console.log(el);
   return (
     <Wrapper>
-      <p>0{number}</p>
-      <img src={el.url} alt={el.name} />
-      <p>5pm - 6pm</p>
+      <p>{name}</p>
+      <img src={el?.url} alt={el?.name} />
+      <p>5pm - 6pm </p>
       <p> Salsa</p>
     </Wrapper>
   );

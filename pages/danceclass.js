@@ -32,7 +32,7 @@ export default function DanceClass() {
     <div>
       <Hero pic={data?.allPicturesLibs[5]} text="SALSA DANCE PRACTICES" />
       <Wrapper>
-        <h2>dance Class</h2>
+        <h2>Dance Class</h2>
         <p>
           Held at prestigious venues within Piccadilly, the Northern Quarter and
           Deansgate, we provide drop-in dance classes in the heart of Manchester

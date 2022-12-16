@@ -13,15 +13,12 @@ export default function DemoCarousel({ showThumbs, interval }) {
     >
       <div>
         <img src="https://res.cloudinary.com/mariuszkra85/image/upload/v1666652541/Salsa/samantha-weisburg-hFTcxZFsG6g-unsplash-scaled_j6fngl.jpg" />
-        <p className="legend">Legend 1</p>
       </div>
       <div>
-        <img src="https://res.cloudinary.com/mariuszkra85/image/upload/v1666652541/Salsa/pylon-1287823-scaled_xx7a8o.jpg" />
-        <p className="legend">Legend 2</p>
+        <img src="https://res.cloudinary.com/mariuszkra85/image/upload/v1666652541/Salsa/Casino2_pgzmnq.jpg" />
       </div>
       <div>
         <img src="https://res.cloudinary.com/mariuszkra85/image/upload/v1666652541/Salsa/Matt1_cjonw7.jpg" />
-        <p className="legend">Legend 3</p>
       </div>
     </Carousel>
   );

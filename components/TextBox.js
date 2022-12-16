@@ -5,12 +5,11 @@ const Wrapper = styled.div`
   padding: 2rem;
   margin: 2rem 0;
   h2 {
-    font-family: 'Bebas Neue';
     letter-spacing: 0.7px;
     font-weight: 200;
   }
   p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   a {
     transition: all 0.5s;
@@ -33,8 +32,12 @@ export default function TextBox({ el, red }) {
     <Wrapper>
       <h2>{el.title}</h2>
       <p>{el.text}</p>
-      {el?.link[0].name
-        ? el.link.map((e) => <a href={e.link}>{e.name}</a>)
+      {el?.link?.[0].name
+        ? el.link.map((e) => (
+            <a href={e.link} target="_blank" rel="noreferrer">
+              {e.name}
+            </a>
+          ))
         : null}
     </Wrapper>
   );
