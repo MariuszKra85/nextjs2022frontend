@@ -13,6 +13,7 @@ const QUERY_BEGINNER_VIDEO = gql`
       level
       url
       description
+      type
     }
   }
 `;
@@ -40,16 +41,18 @@ export default function Beginners() {
       <Wrapper>
         <p>Here will be video for beginners!!!</p>
         {data.allVideosLibs.map((e) => {
-          if (e.level === 'beginner') {
-            return (
+          console.log(e);
+          return (
+            e.type === 'salsa' &&
+            e.level === 'level 1' && (
               <Video
                 key={e.name}
                 name={e.name}
                 desc={e.description}
                 url={e.url}
               />
-            );
-          }
+            )
+          );
         })}
         <LevelButton level="Back" href="/salsaapp" />
       </Wrapper>

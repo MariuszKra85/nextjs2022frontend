@@ -3,13 +3,17 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   padding: 1rem 2rem;
+  width: 80%;
   border: none;
   background-color: var(--red);
   color: var(--offWhite);
-  margin: 5px;
+  margin: 10px;
   border-radius: 20px;
   a {
     color: var(--offWhite);
+  }
+  @media (min-width: 700px) {
+    max-width: 30%;
   }
 `;
 

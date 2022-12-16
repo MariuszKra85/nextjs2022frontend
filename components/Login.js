@@ -48,7 +48,9 @@ const LOGIN_MUTATION = gql`
           email
           name
           role
-          level
+          SalsaLevel
+          RumbaLevel
+          ChachaLevel
         }
       }
       ... on UserAuthenticationWithPasswordFailure {
@@ -67,6 +69,9 @@ const CURRENT_USER_QUERY = gql`
         email
         name
         role
+        SalsaLevel
+        RumbaLevel
+        ChachaLevel
       }
     }
   }
