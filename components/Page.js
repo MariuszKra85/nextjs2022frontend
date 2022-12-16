@@ -76,6 +76,7 @@ const InnerStyles = styled.div`
 const ImageWrapper = styled.div`
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 80vh;
   max-width: 600px;
@@ -83,7 +84,7 @@ const ImageWrapper = styled.div`
   z-index: -99;
 `;
 const BgImage = styled(Image)`
-  opacity: 0.25;
+  opacity: 0.15;
   max-width: 600px;
 `;
 
