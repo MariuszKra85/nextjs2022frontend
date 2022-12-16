@@ -27,38 +27,35 @@ export default function User({ user }) {
         <LevelButton level="Professional" href="/levelPage?lvl=6&type=salsa" />
       )}
       <h2>Rumba:</h2>
-      <LevelButton level="Novice" href="/beginners" />
+      <LevelButton level="Novice" href="/levelPage?lvl=1&type=rumba" />
       {user.RumbaLevel > 1 ? (
-        <LevelButton level="Beginner" href="/improvers" />
+        <LevelButton level="Beginner" href="/levelPage?lvl=2&type=rumba" />
       ) : null}
       {user.RumbaLevel > 2 ? (
-        <LevelButton level="Improvers" href="/beginners" />
+        <LevelButton level="Improvers" href="/levelPage?lvl=3&type=rumba" />
       ) : null}
       {user.RumbaLevel > 3 && (
-        <LevelButton level="Intermediate" href="/beginners" />
+        <LevelButton level="Intermediate" href="/levelPage?lvl=4&type=rumba" />
       )}
       {user.RumbaLevel > 4 && (
-        <LevelButton level="Advanced" href="/intermidiate" />
-      )}
-      {user.RumbaLevel > 5 && (
-        <LevelButton level="Professional" href="/beginners" />
+        <LevelButton level="Advanced" href="/levelPage?lvl=5&type=rumba" />
       )}
       <h2>Cha-cha:</h2>
-      <LevelButton level="Novice" href="/beginners" />
+      <LevelButton level="Novice" href="/levelPage?lvl=6&type=cha-cha" />
       {user.ChachaLevel > 1 ? (
-        <LevelButton level="Beginner" href="/improvers" />
+        <LevelButton level="Beginner" href="/levelPage?lvl=6&type=cha-cha" />
       ) : null}
       {user.ChachaLevel > 2 ? (
-        <LevelButton level="Improvers" href="/beginners" />
+        <LevelButton level="Improvers" href="/levelPage?lvl=6&type=cha-cha" />
       ) : null}
       {user.ChachaLevel > 3 && (
-        <LevelButton level="Intermediate" href="/beginners" />
+        <LevelButton
+          level="Intermediate"
+          href="/levelPage?lvl=6&type=cha-cha"
+        />
       )}
       {user.ChachaLevel > 4 && (
-        <LevelButton level="Advanced" href="/beginners" />
-      )}
-      {user.ChachaLevel > 5 && (
-        <LevelButton level="Professional" href="/beginners" />
+        <LevelButton level="Advanced" href="/levelPage?lvl=6&type=cha-cha" />
       )}
     </div>
   );
