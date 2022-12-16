@@ -32,7 +32,7 @@ export default function TextBox({ el, red }) {
     <Wrapper>
       <h2>{el.title}</h2>
       <p>{el.text}</p>
-      {el?.link[0].name
+      {el?.link?.[0].name
         ? el.link.map((e) => (
             <a href={e.link} target="_blank" rel="noreferrer">
               {e.name}
