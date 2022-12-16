@@ -17,12 +17,15 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function LevelButton({ level, href }) {
+export default function LevelButton({ level, vidlvl, href }) {
   return (
     <StyledButton
       type="button"
       onClick={() => {
-        console.log(`click ${level}`);
+        console.log(`click ${vidlvl}`);
+        if (vidlvl > 2) {
+          console.log(' dobrze ci idzie');
+        }
       }}
     >
       <Link href={href}>{level}</Link>

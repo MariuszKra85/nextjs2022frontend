@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Frame = styled.iframe`
   width: 100%;
+  max-width: 400px;
   border: none;
 `;
 
