@@ -37,6 +37,7 @@ const Wrapper = styled.section`
       top: 25%;
       right: 35%;
       position: absolute;
+      z-index: 99;
       h1 {
         font-size: 8.3rem;
         line-height: 9rem;

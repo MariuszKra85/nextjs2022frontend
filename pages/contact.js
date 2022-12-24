@@ -1,36 +1,6 @@
-import React from 'react';
-import GoogleMapReact from 'google-map-react';
 import TextBox from '../components/TextBox';
 
-const AnyReactComponent = ({ text }) => (
-  <div
-    style={{
-      width: '100px',
-    }}
-  >
-    <div
-      style={{
-        width: '8px',
-        height: '8px',
-        backgroundColor: 'red',
-        borderRadius: '4px',
-      }}
-    >
-      {' '}
-    </div>
-    {text}
-  </div>
-);
-
 function Contact() {
-  const defaultProps = {
-    center: {
-      lat: 53.4808,
-      lng: 2.2426,
-    },
-    zoom: 11,
-  };
-
   const place1 = {
     title: `WILSON'S SOCIAL`,
     text: ` 42-44 OLDHAM ST, MANCHESTER M4 1LE (DOWNSTAIRS)`,
