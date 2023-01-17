@@ -27,26 +27,6 @@ const Wrapper = styled.section`
     padding-top: 0;
     font-size: 2rem;
   }
-
-  @media (min-width: 560px) {
-    img {
-    }
-  }
-  @media (min-width: 1200px) {
-    span {
-      top: 25%;
-      right: 35%;
-      position: absolute;
-      z-index: 99;
-      h1 {
-        font-size: 8.3rem;
-        line-height: 9rem;
-      }
-      h2 {
-        font-size: 5.4rem;
-      }
-    }
-  }
 `;
 
 export default function Heading() {
