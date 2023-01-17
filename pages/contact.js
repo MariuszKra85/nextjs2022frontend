@@ -22,8 +22,9 @@ function Contact() {
         }}
       >
         <iframe
-          src="https://www.google.com/maps/d/u/0/embed?mid=1xHUDzHB2urzf6Qa-lUFxuKS6qZk0QAs&ehbc=2E312F"
-          width="400"
+          title="map"
+          src="https://www.google.com/maps/d/u/0/embed?mid=1Ntnw86NNEOJGurG9jJnPI5HxuDk&ehbc=2E312F"
+          width="640"
           height="480"
         />
       </div>
