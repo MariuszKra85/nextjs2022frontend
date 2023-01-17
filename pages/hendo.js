@@ -1,6 +1,8 @@
 import { Carousel } from 'react-responsive-carousel';
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import BookingLink from '../components/LinkButton';
 
-export default function HenDo() {
+export default function HenDo(showThumbs) {
   return (
     <div>
       <h2>ARE YOU ORGANISING A HEN PARTY? WHY NOT TRY SALSA?</h2>
@@ -9,7 +11,7 @@ export default function HenDo() {
         autoPlay
         emulateTouch
         showThumbs={showThumbs}
-        interval={interval}
+        interval={2000}
         infiniteLoop
       >
         <div>
